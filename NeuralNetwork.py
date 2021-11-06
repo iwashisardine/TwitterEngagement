@@ -68,11 +68,13 @@ train_stats = train_stats.transpose()
 train_labels = train_dataset.pop('engagement')
 test_labels = test_dataset.pop('engagement')
 
+# データの正規化
 def norm(x):
   return (x - train_stats['mean']) / train_stats['std']
 normed_train_data = norm(train_dataset)
 normed_test_data = norm(test_dataset)
 
+# モデルの構築
 def build_model():
   model = keras.Sequential([
     layers.Dense(512, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu', input_shape=[len(train_dataset.keys())]),
