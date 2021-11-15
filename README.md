@@ -7,7 +7,7 @@ Predict Twitter Engagement
 Place python files that is adapted to new environment(windows)
 
 #### colab directory
-Place ipynb file that is used on Google Colabratory
+Place ipynb file that is used on Google Colaboratory
 
 #### rawdata directory
 Place raw tweets data(raw means that the data aren't processed)
